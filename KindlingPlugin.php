@@ -3,29 +3,34 @@ namespace Craft;
 
 class KindlingPlugin extends BasePlugin
 {
-    function getName()
+    public function getName()
     {
         return 'Kindling';
     }
 
-    function getVersion()
+    public function getVersion()
     {
         return '1.0';
     }
 
-    function getDeveloper()
+    public function getDeveloper()
     {
         return 'Imarc';
     }
 
-    function getDeveloperUrl()
+    public function getDeveloperUrl()
     {
         return 'http://imarc.com';
     }
 
-    function addTwigExtension()
+    public function addTwigExtension()
     {
         Craft::import('plugins.kindling.twigextensions.PathingVariablesExtension');
-        return new PathingVariablesExtension();
+        Craft::import('plugins.kindling.twigextensions.CookieExtension');
+
+        return [
+            new PathingVariablesExtension(),
+            new CookieExtension(),
+        ];
     }
 }
