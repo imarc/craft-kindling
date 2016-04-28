@@ -1,0 +1,17 @@
+{
+    "name": "imarc/craft-kindling",
+    "description": "A Craft plugin and Twig Extension providing some convienences.",
+    "homepage": "https://github.com/imarc/craft-kindling",
+    "version": "1.0.0",
+    "type": "craft-plugin",
+    "license": "Apache",
+    "authors": [
+        {
+            "name": "Kevin Hamer",
+            "email": "kevin@imarc.com"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
