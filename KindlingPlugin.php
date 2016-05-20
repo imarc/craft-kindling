@@ -27,10 +27,12 @@ class KindlingPlugin extends BasePlugin
     {
         Craft::import('plugins.kindling.twigextensions.PathingVariablesExtension');
         Craft::import('plugins.kindling.twigextensions.CookieExtension');
+        Craft::import('plugins.kindling.twigextensions.InflectionExtension');
 
         return [
             new PathingVariablesExtension(),
             new CookieExtension(),
+            new InflectionExtension(),
         ];
     }
 }
