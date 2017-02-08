@@ -10,7 +10,7 @@ class KindlingPlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '1.2.0';
+        return '1.3.0';
     }
 
 	public function getSchemaVersion()
@@ -33,11 +33,13 @@ class KindlingPlugin extends BasePlugin
         Craft::import('plugins.kindling.twigextensions.PathingVariablesExtension');
         Craft::import('plugins.kindling.twigextensions.CookieExtension');
         Craft::import('plugins.kindling.twigextensions.ArrayExtension');
+        Craft::import('plugins.kindling.twigextensions.WrapEmbedsExtension');
 
         return [
             new PathingVariablesExtension(),
             new CookieExtension(),
-            new ArrayExtension()
+            new ArrayExtension(),
+            new WrapEmbedsExtension()
         ];
     }
 }
