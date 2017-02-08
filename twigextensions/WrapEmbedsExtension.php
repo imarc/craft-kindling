@@ -11,31 +11,25 @@ namespace Craft;
 
 class WrapEmbedsExtension extends \Twig_Extension
 {
-  protected $env;
 
-  public function getName()
-  {
-    return 'WrapEmbeds Twig Extension';
-  }
+    public function getName()
+    {
+      return 'WrapEmbeds Twig Extension';
+    }
 
-  public function getFilters()
-  {
-    return array('wrapembeds' => new \Twig_Filter_Method($this, 'wrapembeds'));
-  }
+    public function getFilters()
+    {
+      return array('wrapembeds' => new \Twig_Filter_Method($this, 'wrapembeds'));
+    }
 
-  public function initRuntime(\Twig_Environment $env)
-  {
-    $this->env = $env;
-  }
+    public function wrapembeds($content)
+    {
+      $filtered = preg_replace('(<iframe.+?iframe>)si', '<div class="responsive_video">\0</div>', $content);
 
-  public function wrapembeds($content)
-  {
-    $filtered = preg_replace('(<iframe.+?iframe>)si', '<div class="responsive_video">\0</div>', $content);
+      $charset = craft()->templates->getTwig()->getCharset();
+      $filtered = new RichTextData($filtered, $charset);
 
-    $charset = craft()->templates->getTwig()->getCharset();
-    $filtered = new RichTextData($filtered, $charset);
-
-    return $filtered;
-  }
-
+      return $filtered;
+    }
+    
 }
