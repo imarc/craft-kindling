@@ -11,6 +11,20 @@
         }
     ],
     "require": {
-        "composer/installers": "~1.0"
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Imarc\\Craft\\Kindling\\": "src/"
+        }
+    },
+    "support": {
+        "email": "info@imarc.com"
+    },
+    "extra": {
+        "handle": "kindling",
+        "name": "Craft Kindling",
+        "developer": "Imarc",
+        "developerUrl": "https://www.imarc.com"
     }
 }

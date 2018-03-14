@@ -1,5 +1,5 @@
 <?php
-namespace Craft;
+namespace Imarc\Craft\Kindling;
 
 /**
  * Provides the wrapembeds Twig filter, which currently wraps iframes
@@ -31,5 +31,5 @@ class WrapEmbedsExtension extends \Twig_Extension
 
         return $filtered;
     }
-    
+
 }
