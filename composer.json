@@ -3,6 +3,13 @@
     "description": "A Craft plugin and Twig Extension providing some convienences.",
     "homepage": "https://github.com/imarc/craft-kindling",
     "type": "craft-plugin",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "craft-kindling"
+    ],
     "license": "Apache",
     "authors": [
         {
@@ -11,7 +18,7 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0-RC1"
+        "craftcms/cms": "^3.0.2"
     },
     "autoload": {
         "psr-4": {
@@ -22,8 +29,11 @@
         "email": "info@imarc.com"
     },
     "extra": {
-        "handle": "kindling",
-        "name": "Craft Kindling",
+        "handle": "craft-kindling",
+        "name": "craft-kindling",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "class": "\\Imarc\\Craft\\Kindling\\Plugin",
         "developer": "Imarc",
         "developerUrl": "https://www.imarc.com"
     }
