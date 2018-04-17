@@ -13,5 +13,6 @@ class Plugin extends \craft\base\Plugin
         Craft::$app->view->twig->addExtension(new CookieExtension());
         Craft::$app->view->twig->addExtension(new ArrayExtension());
         Craft::$app->view->twig->addExtension(new WrapEmbedsExtension());
+        Craft::$app->view->twig->addExtension(new InflectionExtension());
     }
 }
