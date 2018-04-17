@@ -2,7 +2,7 @@
 namespace Imarc\Craft\Kindling;
 
 use Twig_Extension;
-use Twig_Filter;
+use Twig_SimpleFilter;
 
 /**
  * Provides the wrapembeds Twig filter, which currently wraps iframes
@@ -22,17 +22,14 @@ class WrapEmbedsExtension extends Twig_Extension
 
     public function getFilters()
     {
-        return array('wrapembeds' => new Twig_Filter('wrapembeds'));
+        return [
+            new Twig_SimpleFilter('wrapembeds', [$this, 'wrapembeds'], ['is_safe' => ['html']]),
+        ];
     }
 
     public function wrapembeds($content)
     {
-        $filtered = preg_replace('(<iframe.+?iframe>)si', '<div class="responsive_video">\0</div>', $content);
-
-        $charset = craft()->templates->getTwig()->getCharset();
-        $filtered = new RichTextData($filtered, $charset);
-
-        return $filtered;
+        return preg_replace('(<iframe.+?iframe>)si', '<div class="responsive_video">\0</div>', $content);
     }
 
 }
