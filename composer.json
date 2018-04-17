@@ -31,7 +31,6 @@
     },
     "extra": {
         "handle": "craft-kindling",
-        "class": "\\Imarc\\Craft\\Kindling\\Plugin",
         "name": "Craft Kindling",
         "developer": "Imarc",
         "developerUrl": "https://www.imarc.com",
