@@ -10,7 +10,7 @@
         "craft-plugin",
         "craft-kindling"
     ],
-    "license": "Apache",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Kevin Hamer",
