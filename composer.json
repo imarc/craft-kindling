@@ -18,7 +18,8 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.2"
+        "craftcms/cms": "^3.0.2",
+        "twig/twig": "^2.4.4"
     },
     "autoload": {
         "psr-4": {
@@ -31,7 +32,7 @@
     "extra": {
         "handle": "craft-kindling",
         "class": "\\Imarc\\Craft\\Kindling\\Plugin",
-        "name": "craft-kindling",
+        "name": "Craft Kindling",
         "developer": "Imarc",
         "developerUrl": "https://www.imarc.com",
         "hasCpSettings": false,

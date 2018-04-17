@@ -1,6 +1,7 @@
 <?php
 namespace Imarc\Craft\Kindling;
 
+use Craft;
 use Twig_Extension;
 use Twig_Extension_GlobalsInterface;
 use Twig_SimpleFunction;
@@ -21,7 +22,7 @@ class PathingVariablesExtension extends Twig_Extension implements Twig_Extension
      */
     public function getPathSegments($offset = 0, $length = null)
     {
-        $segments = array_filter(explode('/', craft()->request->path));
+        $segments = array_filter(explode('/', Craft::$app->request->getFullPath()));
         $segments = array_slice($segments, $offset, $length);
 
         return array_map(

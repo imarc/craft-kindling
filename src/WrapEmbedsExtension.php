@@ -1,6 +1,9 @@
 <?php
 namespace Imarc\Craft\Kindling;
 
+use Twig_Extension;
+use Twig_Filter;
+
 /**
  * Provides the wrapembeds Twig filter, which currently wraps iframes
  * within the input with:
@@ -9,7 +12,7 @@ namespace Imarc\Craft\Kindling;
  *
  */
 
-class WrapEmbedsExtension extends \Twig_Extension
+class WrapEmbedsExtension extends Twig_Extension
 {
 
     public function getName()
@@ -19,7 +22,7 @@ class WrapEmbedsExtension extends \Twig_Extension
 
     public function getFilters()
     {
-        return array('wrapembeds' => new \Twig_Filter_Method($this, 'wrapembeds'));
+        return array('wrapembeds' => new Twig_Filter('wrapembeds'));
     }
 
     public function wrapembeds($content)

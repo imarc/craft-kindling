@@ -1,17 +1,17 @@
 <?php
 namespace Imarc\Craft\Kindling;
 
+use Craft;
+
 class Plugin extends \craft\base\Plugin
 {
     public function init()
     {
         parent::init();
 
-        if (Craft::$app->getIsSiteRequest()) {
-            Craft::$app->view->registerTwigExtension(new PathingVariableExtension());
-            Craft::$app->view->registerTwigExtension(new CookieExtension());
-            Craft::$app->view->registerTwigExtension(new ArrayExtension());
-            Craft::$app->view->registerTwigExtension(new WrapEmbedsExtension());
-        }
+        Craft::$app->view->twig->addExtension(new PathingVariablesExtension());
+        Craft::$app->view->twig->addExtension(new CookieExtension());
+        Craft::$app->view->twig->addExtension(new ArrayExtension());
+        Craft::$app->view->twig->addExtension(new WrapEmbedsExtension());
     }
 }
