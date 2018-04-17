@@ -1,5 +1,5 @@
 <?php
-namespace Craft;
+namespace Imarc\Craft\Kindling;
 
 use Twig_Extension;
 use Twig_SimpleFilter;
