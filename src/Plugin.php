@@ -9,10 +9,10 @@ class Plugin extends \craft\base\Plugin
     {
         parent::init();
 
-        Craft::$app->view->twig->addExtension(new PathingVariablesExtension());
-        Craft::$app->view->twig->addExtension(new CookieExtension());
-        Craft::$app->view->twig->addExtension(new ArrayExtension());
-        Craft::$app->view->twig->addExtension(new WrapEmbedsExtension());
-        Craft::$app->view->twig->addExtension(new InflectionExtension());
+        Craft::$app->view->registerTwigExtension(new PathingVariablesExtension());
+        Craft::$app->view->registerTwigExtension(new CookieExtension());
+        Craft::$app->view->registerTwigExtension(new ArrayExtension());
+        Craft::$app->view->registerTwigExtension(new WrapEmbedsExtension());
+        Craft::$app->view->registerTwigExtension(new InflectionExtension());
     }
 }
