@@ -1,4 +1,6 @@
 <?php
+namespace Imarc\Craft\Kindling;
+
 use Craft;
 
 class KindlingVariable

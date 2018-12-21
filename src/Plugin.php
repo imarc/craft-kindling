@@ -3,15 +3,6 @@ namespace Imarc\Craft\Kindling;
 
 use Craft;
 
-use \craft-kindling\twigextensions\ArrayExtension;
-use \craft-kindling\twigextensions\CookieExtension;
-use \craft-kindling\twigextensions\InflectionExtension;
-use \craft-kindling\twigextensions\LinkingExtension;
-use \craft-kindling\twigextensions\PathingVariablesExtension;
-use \craft-kindling\twigextensions\WrapEmbedsExtension;
-
-use \craft-kindling\variables\KindlingVariable;
-
 class Plugin extends \craft\base\Plugin
 {
     public function init()
