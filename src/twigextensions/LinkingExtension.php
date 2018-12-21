@@ -27,14 +27,12 @@ class LinkingExtension extends Twig_Extension
     /**
      */
     public function linkify($text_content) {
-        return preg_replace(
-                      "~[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]~",
-                      "<a href=\"\\0\">\\0</a>", 
-                      $text_content);
+
+        $string = preg_replace(
+              "~[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]~",
+              "<a href=\"\\0\">\\0</a>", 
+              $text_content);
+
+        return $string;
     }
 }
-
-
-
-
-        

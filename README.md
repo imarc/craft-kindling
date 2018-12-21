@@ -21,6 +21,13 @@ If only one parameter is passed, it returns the value of the cookie if it
 exists. If more two or more parameters are passed, it has the same parameters
 as PHP's own [setcookie()](http://php.net/manual/en/function.setcookie.php).
 
+Linkify
+---------------------
+
+A simple twig filter, `linkify`, that searches a text string for URLs and email addresses and wraps them in anchor tags. Remember to use the |raw filer on the output.
+
+`{{ linkify(tweet.text)|raw }}`
+
 Inflection Extension
 --------------------
 
@@ -109,3 +116,15 @@ Wrap Embeds Extension
 This is a simple twig filter, `wrapembeds`, that searches for `<iframe>` tags
 in the text passed in, and if it finds any, wraps them in a div with a class of
 "responsive_video".
+
+
+Template Variables
+---------
+
+setFlash provides a template alias to call craft()->userSession->setFlash($name, $value). Useful for passing variables to the following page, for example passing the page number from the list to detail view
+
+`{% setFlash('page', 3) %}`
+
+executionTime Outputs the time required for the server to execute the page output
+
+`{{ craft.kindling.executionTime }}` 

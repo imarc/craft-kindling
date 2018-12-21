@@ -1,5 +1,8 @@
 <?php
-namespace Imarc\Craft\Kindling;
+namespace Imarc\Craft\Kindling\variables;
+
+use Imarc\Craft\Kindling\Plugin;
+
 
 use Craft;
 
@@ -8,11 +11,11 @@ class KindlingVariable
     /**
      * Provides public access to the craft()->userSession->setFlash method from your Twig template:
      *
-     *     {{ craft.kindling.setFlash(name, value, default) }}
+     *     {{ craft.kindling.setFlash(name, value) }}
      */
-    public function setFlash($name, $value, $default = null)
+    public function setFlash($name, $value)
     {
-        craft()->userSession->setFlash($name, $value, $default);
+        craft()->userSession->setFlash($name, $value);
 
         return true;
     }
