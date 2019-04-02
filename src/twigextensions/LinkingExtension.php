@@ -28,11 +28,15 @@ class LinkingExtension extends Twig_Extension
      */
     public function linkify($text_content) {
 
-        $string = preg_replace(
-              "~[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]~",
-              "<a href=\"\\0\">\\0</a>", 
-              $text_content);
+        $replacements = [
+            "~[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]~" => "<a href=\"\\0\">\\0</a>",
+            "~(\S+@\S+\.\S+)~" => "<a href=\"mailto:\\0\">\\0</a>",
+        ];
 
+        foreach ($replacements as $regex => $replace) {
+            $string = preg_replace($regex, $replace, $string);
+        }
+        
         return $string;
     }
 }
