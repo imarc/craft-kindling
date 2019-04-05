@@ -121,10 +121,6 @@ in the text passed in, and if it finds any, wraps them in a div with a class of
 Template Variables
 ---------
 
-setFlash provides a template alias to call craft()->userSession->setFlash($name, $value). Useful for passing variables to the following page, for example passing the page number from the list to detail view
-
-`{% setFlash('page', 3) %}`
-
 executionTime Outputs the time required for the server to execute the page output
 
 `{{ craft.kindling.executionTime }}` 
