@@ -22,7 +22,10 @@ class PathingVariablesExtension extends Twig_Extension implements Twig_Extension
      */
     public function getPathSegments($offset = 0, $length = null)
     {
-        $segments = array_filter(explode('/', Craft::$app->request->getFullPath()));
+        $request = Craft::$app->getRequest();
+        $path = $request->getIsConsoleRequest() ? '' : $request->getFullPath();
+        
+        $segments = array_filter(explode('/', $path));
         $segments = array_slice($segments, $offset, $length);
 
         return array_map(
