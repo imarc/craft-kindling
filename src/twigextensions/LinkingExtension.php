@@ -26,7 +26,7 @@ class LinkingExtension extends Twig_Extension
 
     /**
      */
-    public function linkify($text_content) {
+    public function linkify($string) {
 
         $replacements = [
             "~[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]~" => "<a href=\"\\0\">\\0</a>",
