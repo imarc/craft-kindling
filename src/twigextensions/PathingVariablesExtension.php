@@ -1,5 +1,5 @@
 <?php
-namespace Imarc\Craft\Kindling;
+namespace Imarc\Craft\Kindling\twigextensions;
 
 use Craft;
 use Twig_Extension;
@@ -24,7 +24,7 @@ class PathingVariablesExtension extends Twig_Extension implements Twig_Extension
     {
         $request = Craft::$app->getRequest();
         $path = $request->getIsConsoleRequest() ? '' : $request->getFullPath();
-        
+
         $segments = array_filter(explode('/', $path));
         $segments = array_slice($segments, $offset, $length);
 

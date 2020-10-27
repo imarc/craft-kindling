@@ -1,5 +1,5 @@
 <?php
-namespace Imarc\Craft\Kindling;
+namespace Imarc\Craft\Kindling\twigextensions;
 
 use Twig_Extension;
 use Twig_SimpleFunction;

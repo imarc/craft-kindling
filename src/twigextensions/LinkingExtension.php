@@ -1,5 +1,5 @@
 <?php
-namespace Imarc\Craft\Kindling;
+namespace Imarc\Craft\Kindling\twigextensions;
 
 use Twig_Extension;
 use Twig_SimpleFunction;
@@ -26,12 +26,12 @@ class LinkingExtension extends Twig_Extension
 
     /**
      */
-    public function linkify($string) 
+    public function linkify($string)
     {
         if (empty($string)) {
             return '';
         }
-        
+
         $replacements = [
             "~[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]~" => "<a href=\"\\0\">\\0</a>",
             "~(\S+@\S+\.\S+)~" => "<a href=\"mailto:\\0\">\\0</a>",
@@ -40,7 +40,7 @@ class LinkingExtension extends Twig_Extension
         foreach ($replacements as $regex => $replace) {
             $string = preg_replace($regex, $replace, $string);
         }
-        
+
         return $string;
     }
 }

@@ -2,6 +2,13 @@
 namespace Imarc\Craft\Kindling;
 
 use Imarc\Craft\Kindling\variables\KindlingVariable;
+use Imarc\Craft\Kindling\twigextensions\ArrayExtension;
+use Imarc\Craft\Kindling\twigextensions\CookieExtension;
+use Imarc\Craft\Kindling\twigextensions\InflectionExtension;
+use Imarc\Craft\Kindling\twigextensions\LinkingExtension;
+use Imarc\Craft\Kindling\twigextensions\PathingVariablesExtension;
+use Imarc\Craft\Kindling\twigextensions\WrapEmbedsExtension;
+
 
 use Craft;
 use craft\web\twig\variables\CraftVariable;
