@@ -4,7 +4,7 @@ namespace Imarc\Craft\Kindling\twigextensions;
 use Twig_Extension;
 use Twig_SimpleFunction;
 
-class LinkingExtension extends Twig_Extension
+class LinkingExtension extends \Twig\Extension\AbstractExtension
 {
     /**
      * @return string
@@ -20,7 +20,7 @@ class LinkingExtension extends Twig_Extension
     public function getFunctions()
     {
         return [
-            new Twig_SimpleFunction('linkify', [$this, 'linkify']),
+            new \Twig\TwigFunction('linkify', [$this, 'linkify']),
         ];
     }
 

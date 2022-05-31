@@ -3,10 +3,10 @@ namespace Imarc\Craft\Kindling\twigextensions;
 
 use Craft;
 use Twig_Extension;
-use Twig_Extension_GlobalsInterface;
+use Twig\Extension\GlobalsInterface;
 use Twig_SimpleFunction;
 
-class PathingVariablesExtension extends Twig_Extension implements Twig_Extension_GlobalsInterface
+class PathingVariablesExtension extends \Twig\Extension\AbstractExtension implements \Twig\Extension\GlobalsInterface
 {
     /**
      * Returns an array of the path segments, sanitized.
@@ -96,8 +96,8 @@ class PathingVariablesExtension extends Twig_Extension implements Twig_Extension
     public function getFunctions()
     {
         return [
-            new Twig_SimpleFunction('path_classes', [$this, 'getPathGeneratedClasses']),
-            new Twig_SimpleFunction('path_id', [$this, 'getPathGeneratedID']),
+            new \Twig\TwigFunction('path_classes', [$this, 'getPathGeneratedClasses']),
+            new \Twig\TwigFunction('path_id', [$this, 'getPathGeneratedID']),
         ];
     }
 }

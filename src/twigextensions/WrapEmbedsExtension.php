@@ -12,7 +12,7 @@ use Twig_SimpleFilter;
  *
  */
 
-class WrapEmbedsExtension extends Twig_Extension
+class WrapEmbedsExtension extends \Twig\Extension\AbstractExtension
 {
 
     public function getName()
@@ -23,7 +23,7 @@ class WrapEmbedsExtension extends Twig_Extension
     public function getFilters()
     {
         return [
-            new Twig_SimpleFilter('wrapembeds', [$this, 'wrapembeds'], ['is_safe' => ['html']]),
+            new \Twig\TwigFilter('wrapembeds', [$this, 'wrapembeds'], ['is_safe' => ['html']]),
         ];
     }
 

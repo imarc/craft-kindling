@@ -7,7 +7,7 @@ use Twig_SimpleFilter;
 /**
  * Provides the inflect Twig filter.
  */
-class InflectionExtension extends Twig_Extension
+class InflectionExtension extends \Twig\Extension\AbstractExtension
 {
     /**
      * These are the all the adjective versions of numbers that aren't just the
@@ -120,8 +120,8 @@ class InflectionExtension extends Twig_Extension
     public function getFilters()
     {
         return [
-            new Twig_SimpleFilter('inflect', [$this, 'inflect']),
-            new Twig_SimpleFilter('numberToWords', [$this, 'convertToWords']),
+            new \Twig\TwigFilter('inflect', [$this, 'inflect']),
+            new \Twig\TwigFilter('numberToWords', [$this, 'convertToWords']),
         ];
     }
 
