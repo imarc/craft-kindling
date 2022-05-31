@@ -76,7 +76,7 @@ class PathingVariablesExtension extends \Twig\Extension\AbstractExtension implem
      *
      * @return array
      */
-    public function getGlobals()
+    public function getGlobals(): array
     {
         return [
             'path_classes' => $this->getPathSegments(),
