@@ -20,7 +20,7 @@
     "require": {
         "php": "^8.0",
         "craftcms/cms": "^3.0.2 || ^4.0.0",
-        "twig/twig": "^2.4.4"
+        "twig/twig": "^3.3.10"
     },
     "autoload": {
         "psr-4": {
