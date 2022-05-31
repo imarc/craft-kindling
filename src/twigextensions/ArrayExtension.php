@@ -4,7 +4,7 @@ namespace Imarc\Craft\Kindling\twigextensions;
 use Twig_Extension;
 use Twig_SimpleFunction;
 
-class ArrayExtension extends Twig_Extension
+class ArrayExtension extends \Twig\Extension\AbstractExtension
 {
     /**
      * @return string
@@ -20,7 +20,7 @@ class ArrayExtension extends Twig_Extension
     public function getFunctions()
     {
         return [
-            new Twig_SimpleFunction('intersect', [$this, 'intersect']),
+            new \Twig\TwigFunction('intersect', [$this, 'intersect']),
         ];
     }
 

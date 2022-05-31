@@ -8,7 +8,7 @@ use Twig_SimpleFunction;
  * This extension provides a single twig function, cookie(), that provides
  * access to setcookie() and getting cookie values.
  */
-class CookieExtension extends Twig_Extension
+class CookieExtension extends \Twig\Extension\AbstractExtension
 {
     /**
      * @return string
@@ -24,7 +24,7 @@ class CookieExtension extends Twig_Extension
     public function getFunctions()
     {
         return [
-            new Twig_SimpleFunction('cookie', [$this, 'cookie']),
+            new \Twig\TwigFunction('cookie', [$this, 'cookie']),
         ];
     }
 
