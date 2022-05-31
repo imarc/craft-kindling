@@ -1,10 +1,6 @@
 <?php
 namespace Imarc\Craft\Kindling\variables;
 
-use Imarc\Craft\Kindling\Plugin;
-
-use Craft;
-
 class KindlingVariable
 {
     /**

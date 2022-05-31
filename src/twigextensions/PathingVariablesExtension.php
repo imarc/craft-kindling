@@ -2,10 +2,6 @@
 namespace Imarc\Craft\Kindling\twigextensions;
 
 use Craft;
-use Twig_Extension;
-use Twig\Extension\GlobalsInterface;
-use Twig_SimpleFunction;
-
 class PathingVariablesExtension extends \Twig\Extension\AbstractExtension implements \Twig\Extension\GlobalsInterface
 {
     /**

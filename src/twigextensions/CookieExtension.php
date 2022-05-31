@@ -1,9 +1,6 @@
 <?php
 namespace Imarc\Craft\Kindling\twigextensions;
 
-use Twig_Extension;
-use Twig_SimpleFunction;
-
 /**
  * This extension provides a single twig function, cookie(), that provides
  * access to setcookie() and getting cookie values.

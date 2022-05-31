@@ -1,9 +1,6 @@
 <?php
 namespace Imarc\Craft\Kindling\twigextensions;
 
-use Twig_Extension;
-use Twig_SimpleFunction;
-
 class LinkingExtension extends \Twig\Extension\AbstractExtension
 {
     /**
